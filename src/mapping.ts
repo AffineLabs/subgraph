@@ -1,13 +1,10 @@
 import { BigDecimal, ethereum } from "@graphprotocol/graph-ts";
 
-import { ERC20, Transfer } from "../generated/ERC20/ERC20";
-import {
-  Account,
-  Token,
-  TokenBalance,
-} from "../generated/schema";
+import { ERC20, Transfer } from "../generated/ultraETHs/ERC20";
 
-const zeroAddress = '0x0000000000000000000000000000000000000000';
+import { Account, Token, TokenBalance } from "../generated/schema";
+
+const zeroAddress = "0x0000000000000000000000000000000000000000";
 
 function loadOrCreateAccount(address: string): Account | null {
   let account = Account.load(address);

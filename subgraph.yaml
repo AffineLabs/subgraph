@@ -4,12 +4,12 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: miweETH
-    network: linea
+    name: ultraETH
+    network: mainnet
     source:
       abi: ERC20
-      address: '0x3478dE5e82431676C87113001bBeeb359cb5eAa5'
-      startBlock: 4811275
+      address: "0xcbC632833687DacDcc7DfaC96F6c5989381f4B47"
+      startBlock: 20428324
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -26,12 +26,12 @@ dataSources:
           handler: handleTransfer
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: miuniETH
-    network: linea
+    name: ultraETHs
+    network: mainnet
     source:
       abi: ERC20
-      address: '0x56ceD49205e5D9b4d8D9B29f4aBfbe7bb8b08768'
-      startBlock: 6645189
+      address: "0xF0a949B935e367A94cDFe0F2A54892C2BC7b2131"
+      startBlock: 20428639
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
