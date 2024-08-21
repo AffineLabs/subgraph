@@ -4,34 +4,12 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: ultraETH
-    network: mainnet
-    source:
-      abi: ERC20
-      address: "0xcbC632833687DacDcc7DfaC96F6c5989381f4B47"
-      startBlock: 20428324
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.6
-      language: wasm/assemblyscript
-      entities:
-        - Account
-        - Token
-        - TokenBalance
-      abis:
-        - name: ERC20
-          file: ./abis/ERC20.json
-      eventHandlers:
-        - event: Transfer(indexed address,indexed address,uint256)
-          handler: handleTransfer
-      file: ./src/mapping.ts
-  - kind: ethereum/contract
     name: ultraETHs
-    network: mainnet
+    network: linea
     source:
       abi: ERC20
-      address: "0xF0a949B935e367A94cDFe0F2A54892C2BC7b2131"
-      startBlock: 20428639
+      address: "0xB838Eb4F224c2454F2529213721500faf732bf4d"
+      startBlock: 8387237
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
